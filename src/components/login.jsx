@@ -23,12 +23,12 @@ export const Login = () => {
     console.log(genToken);
     setToken(genToken);
     localStorage.setItem("token", genToken);
-    router.push("/home");
+    router.push("/admin-dashboard");
   };
 
   useEffect(() => {
     if (token) {
-      router.push("/home");
+      router.push("/admin-dashboard");
     }
   }, [token]);
 
